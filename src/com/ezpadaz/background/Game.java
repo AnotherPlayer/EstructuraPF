@@ -24,9 +24,9 @@ public class Game {
     public void startGame(){
     // este metodo iniciara el juego.
     // nada.
-        _generatedNumber = gt.gtGenNum();
+        _generatedNumber = gt.getNum();
     //Debug purposes only.
-        //System.out.println("El numero se ha generado correctamente: "+_generatedNumber);
+    //System.out.println("El numero se ha generado correctamente: "+_generatedNumber);
         isGameActive = true;
     }
     
@@ -34,7 +34,7 @@ public class Game {
         return _generatedNumber;
     }
     
-    public void verifyAnswer(String num){
+    public void verificar(String num){
         //verificacion.
         picas = 0;
         fijas = 0;

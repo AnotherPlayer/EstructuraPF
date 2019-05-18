@@ -19,12 +19,22 @@ public class GameTools {
         System.out.println("GameTools boot.");
     }
     
-    
-    public String gtGenNum(){
-        //Genera un numero de 4 digitos y lo retorna como string
-        String resultado = "";
-        int alt = rand.nextInt(9999-1000)+1000;
-        resultado = String.valueOf(alt);
-        return resultado;
+    public String getNum(){
+        String gen = "";
+        int repeat = 0;
+        
+        while(gen.length()< 4){
+            int selected = rand.nextInt(10);
+            if(gen.contains(String.valueOf(selected))){
+                //Si la cadena ya contiene ese numero, skip.
+            }else{
+                if(repeat == 0 && selected == 0){
+                    // Si es el primero numero, y el primer numero es 0, se hace skip.
+                }else{
+                    gen += selected;
+                }
+            }
+        }   
+        return gen;
     }
 }

@@ -19,20 +19,7 @@ public class Controlador {
         Game g = new Game();
         
         g.startGame();
-        
-        while(g.gameStatus()){
-            System.out.println("PICAS: "+g.getPicas()+"  FIJAS: "+g.getFijas());
-            System.out.println("Porfavor introduce un numero (o x, para salir)");
-            String guess = kb.nextLine();
-            if(guess.length()>4){
-                System.out.println("That aint a valid opt boi.");
-            }else if(guess.contains("x")){
-                break;
-            }else if(guess.contains("c")){
-                System.out.println(g.getWinNumber());
-            }else{
-                g.verifyAnswer(guess);
-            }
-        }
+//        
+        System.out.println(g.getWinNumber());
     }
 }
