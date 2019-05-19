@@ -23,4 +23,9 @@ public class BackEnd{
     }
     
 
+    public void newGame(){
+        juego.startGame();
+        ventana.updateStatus(juego.gameStatus());
+        
+    }
 }

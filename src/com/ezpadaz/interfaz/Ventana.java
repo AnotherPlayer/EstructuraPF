@@ -53,7 +53,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         UserInput = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         status_label = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -72,6 +72,7 @@ public class Ventana extends javax.swing.JFrame {
 
         jLabel1.setText("Picas / Fijas Beta");
 
+        UserInput.setEditable(false);
         UserInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UserInputActionPerformed(evt);
@@ -80,7 +81,7 @@ public class Ventana extends javax.swing.JFrame {
 
         jScrollPane2.setToolTipText("");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -103,20 +104,25 @@ public class Ventana extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane2.setViewportView(tabla);
+        if (tabla.getColumnModel().getColumnCount() > 0) {
+            tabla.getColumnModel().getColumn(0).setResizable(false);
+            tabla.getColumnModel().getColumn(1).setResizable(false);
+            tabla.getColumnModel().getColumn(2).setResizable(false);
         }
 
         jLabel2.setText("Status:");
 
         jLabel3.setText("Introduce un número de 4 Digitos");
 
-        jMenu1.setText("File");
+        jMenu1.setText("Inicio");
 
         jMenuItem1.setText("Nuevo Juego");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
         jMenu1.add(jSeparator1);
 
@@ -199,6 +205,12 @@ public class Ventana extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_UserInputActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // Boton para iniciar nuevo juego.
+        back.newGame();
+        UserInput.setEditable(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -249,7 +261,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel status_label;
+    private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 }
