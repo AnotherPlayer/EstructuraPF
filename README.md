@@ -24,15 +24,15 @@ Ejemplo:
 Número escondido 2631
 
 Jugador:
-2542 una fija
-2382 una fija y una pica
-2374 una fija y una pica
-3910 dos picas
-6931 una pica y dos fijas
-0936 una fija y una pica
-7936 una fija y una pica
-0961 una pica y una fija
-0931 dos fijas
-0231 una pica y dos fijas
-6231 dos pica y dos fijas
-2631 cuatro fijas
+* 2542 una fija
+* 2382 una fija y una pica
+* 2374 una fija y una pica
+* 3910 dos picas
+* 6931 una pica y dos fijas
+* 0936 una fija y una pica
+* 7936 una fija y una pica
+* 0961 una pica y una fija
+* 0931 dos fijas
+* 0231 una pica y dos fijas
+* 6231 dos pica y dos fijas
+* 2631 cuatro fijas
