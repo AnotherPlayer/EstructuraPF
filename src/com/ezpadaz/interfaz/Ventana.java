@@ -20,6 +20,7 @@ public class Ventana extends javax.swing.JFrame {
      */
     public Ventana() {
         initComponents();
+        this.setLocationRelativeTo(null);
         back = new BackEnd(this);
     }
     
@@ -68,6 +69,7 @@ public class Ventana extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Juego de Picas y Fijas");
+        setLocation(new java.awt.Point(0, 0));
         setResizable(false);
 
         UserInput.setEditable(false);
