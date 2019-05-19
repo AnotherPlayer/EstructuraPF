@@ -26,7 +26,7 @@ public class BackEnd{
     
 
     public void newGame(){
-        juego.setVidas(ventana.getTableSize());
+        juego.setVidas(ventana.getTableSize()-1);
         juego.startGame();
         ventana.updateStatus(true);
         ventana.setEdit(true);
@@ -50,6 +50,7 @@ public class BackEnd{
         
         ventana.updateStatus(false);
         ventana.setEdit(false);
+        temp = 0;
         
         if(success){
             JOptionPane.showMessageDialog(null, texSuccess);
