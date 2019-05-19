@@ -208,7 +208,6 @@ public class Ventana extends javax.swing.JFrame {
     private void UserInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserInputActionPerformed
         //Input del usuario al usar enter, debo validar que no sean mas de 4 Digitos y que no sean letras.
         //Debe ser sencillo al usar simplemente un .length y un check de excepciones.
-        
         if(UserInput.getText().length()!=4){
             JOptionPane.showMessageDialog(null, "El numero debe ser de 4 digitos.");
         }
@@ -228,7 +227,6 @@ public class Ventana extends javax.swing.JFrame {
     }
     
     public void addTableData(int espacio, String trial, int picas, int fijas){
-        // 0 1 2
         tabla.setValueAt(trial, espacio, 0);
         tabla.setValueAt(picas, espacio, 1);
         tabla.setValueAt(fijas, espacio, 2);
@@ -250,7 +248,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        //Boton de Salir
         System.exit(0);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
@@ -271,7 +269,6 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // Como jugar
-        
         String texto = "<html>"
                 + "<body>"
                 + "<p>Como Jugar:</p>"
@@ -280,7 +277,7 @@ public class Ventana extends javax.swing.JFrame {
                 + "<p>Ejemplo:</p>"
                 + "<p>Se genera <strong>4152</strong></p>"
                 + "<p>Introduces <strong>5143</strong></p>"
-                + "<p>Se te mostraran: 3 Picas (rojo), 1 Fija(azul):&nbsp; <strong><span style=\"color: #3366ff;\"><span style=\"color: #ff0000;\">5</span>1<span style=\"color: #ff0000;\">4</span></span>3</strong></p>"
+                + "<p>Se te mostraran: 2 Picas (rojo), 1 Fija(azul):&nbsp; <strong><span style=\"color: #3366ff;\"><span style=\"color: #ff0000;\">5</span>1<span style=\"color: #ff0000;\">4</span></span>3</strong></p>"
                 + "<p><span style=\"color: #000000;\">De esta manera deberas adivinar el numero en base a cuantas picas o fijas tienes, en 8 intentos.</span></p>"
                 + "</body>"
                 + "</html>";
@@ -291,9 +288,6 @@ public class Ventana extends javax.swing.JFrame {
     public void setEdit(boolean s){
         UserInput.setEditable(s);
     }
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

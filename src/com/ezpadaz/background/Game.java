@@ -51,10 +51,21 @@ public class Game {
         for(int i=0; i<num.length(); i++){
             if(_generatedNumber.charAt(i) == num.charAt(i)){
                 fijas++;
+                if(picas>0){
+                    picas--;
+                }
             }
         } 
         
         vidas--;
+    }
+    
+    public boolean isGuessed(String val){
+        if(val.equals(_generatedNumber)){
+            return true;
+        }else{
+            return false;
+        }
     }
     
      public String getNum(){
