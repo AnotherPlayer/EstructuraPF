@@ -3,6 +3,7 @@
 Falta:
 
 * Aplicar Grafos (Se esta trabajando en eso).
+* Manual de uso (En proceso)
 
 
 # Sobre el juego
