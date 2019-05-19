@@ -13,16 +13,16 @@ import java.util.Scanner;
  */
 public class Controlador {
     
-    public static void main(String[] args) {
-        
-        Scanner kb = new Scanner(System.in);
-        Game g = new Game();
-        
-        g.startGame();      
-        System.out.println(g.getWinNumber());
-        
-        g.verificar("1010");
-        System.out.println(g.getFijas());
-        System.out.println(g.getPicas());
-    }
+//    public static void main(String[] args) {
+//        
+//        Scanner kb = new Scanner(System.in);
+//        Game g = new Game();
+//        
+//        g.startGame();      
+//        System.out.println(g.getWinNumber());
+//        
+//        g.verificar("1010");
+//        System.out.println(g.getFijas());
+//        System.out.println(g.getPicas());
+//    }
 }
