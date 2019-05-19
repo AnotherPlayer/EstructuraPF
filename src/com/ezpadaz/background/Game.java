@@ -40,10 +40,9 @@ public class Game {
         fijas = 0;
         //reset above avoids data leaks.     
         for(int i=0; i<num.length(); i++){
-           String chr = Character.toString(num.charAt(i));
-           if(_generatedNumber.contains(chr)){
-               picas++;
-           }
+           if(num.contains(String.valueOf(_generatedNumber.charAt(i)))){
+                picas++;
+            }
         }
         for(int i=0; i<num.length(); i++){
             if(_generatedNumber.charAt(i) == num.charAt(i)){
