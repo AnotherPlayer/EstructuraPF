@@ -2,7 +2,7 @@
 
 Falta:
 
-* Aplicar Grafos
+* Aplicar Grafos (Se esta trabajando en eso).
 
 
 # Sobre el juego
