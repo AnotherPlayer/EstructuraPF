@@ -15,6 +15,7 @@ public class BackEnd{
     
     private Ventana ventana;
     private Game juego;
+    private int temp = 0;
     
     public BackEnd(Ventana ventana){
         this.ventana = ventana;
@@ -24,8 +25,19 @@ public class BackEnd{
     
 
     public void newGame(){
+        juego.setVidas(ventana.getTableSize());
         juego.startGame();
         ventana.updateStatus(juego.gameStatus());
-        
+    }
+    
+    public void sendValue(String val){
+        if(juego.getVidas()!=0){
+            juego.verificar(val);
+            ventana.addTableData(temp, val, juego.getPicas(), juego.getFijas());
+            temp++;
+        }else{
+            ventana.updateStatus(false);
+            ventana.setEdit(true);
+        }
     }
 }

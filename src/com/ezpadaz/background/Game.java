@@ -53,6 +53,8 @@ public class Game {
                 fijas++;
             }
         } 
+        
+        vidas--;
     }
     
      public String getNum(){
@@ -75,7 +77,12 @@ public class Game {
     }
     
     public void setVidas(int n){
+        System.out.println("Numero de vidas ajustado a: "+n);
         this.vidas = n;
+    }
+    
+    public int getVidas(){
+        return vidas;
     }
     
     

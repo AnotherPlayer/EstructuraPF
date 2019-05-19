@@ -197,20 +197,36 @@ public class Ventana extends javax.swing.JFrame {
         if(UserInput.getText().length()!=4){
             JOptionPane.showMessageDialog(null, "El numero debe ser de 4 digitos.");
         }
-        
         try{
             int numValidation = Integer.parseInt(UserInput.getText());
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Porfavor introduce un numero valido.");
         }
+        
+        //Si no es cachado arriba, enviamos.
+        back.sendValue(UserInput.getText());
     }//GEN-LAST:event_UserInputActionPerformed
 
+    public int getTableSize(){
+        return tabla.getRowCount();
+    }
+    
+    public void addTableData(int espacio, String trial, int picas, int fijas){
+        // 0 1 2
+        tabla.setValueAt(trial, espacio, 0);
+        tabla.setValueAt(picas, espacio, 1);
+        tabla.setValueAt(fijas, espacio, 2);
+    }
+    
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // Boton para iniciar nuevo juego.
         back.newGame();
-        UserInput.setEditable(true);
+        setEdit(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    public void setEdit(boolean s){
+        UserInput.setEditable(s);
+    }
     /**
      * @param args the command line arguments
      */
