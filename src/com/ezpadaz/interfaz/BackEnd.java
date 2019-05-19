@@ -30,6 +30,10 @@ public class BackEnd{
         ventana.updateStatus(juego.gameStatus());
     }
     
+    public void gameOver(){
+        
+    }
+    
     public void sendValue(String val){
         if(juego.getVidas()!=0){
             juego.verificar(val);
@@ -37,7 +41,7 @@ public class BackEnd{
             temp++;
         }else{
             ventana.updateStatus(false);
-            ventana.setEdit(true);
+            ventana.setEdit(false);
         }
     }
 }

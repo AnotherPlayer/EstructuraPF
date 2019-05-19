@@ -127,6 +127,11 @@ public class Ventana extends javax.swing.JFrame {
         jMenu1.add(jSeparator1);
 
         jMenuItem3.setText("Salir");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuBar1.add(jMenu1);
@@ -135,10 +140,20 @@ public class Ventana extends javax.swing.JFrame {
         jMenu2.setToolTipText("");
 
         jMenuItem2.setText("Como Jugar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
         jMenu2.add(jSeparator2);
 
         jMenuItem4.setText("Acerca De");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -205,6 +220,7 @@ public class Ventana extends javax.swing.JFrame {
         
         //Si no es cachado arriba, enviamos.
         back.sendValue(UserInput.getText());
+        UserInput.setText("");
     }//GEN-LAST:event_UserInputActionPerformed
 
     public int getTableSize(){
@@ -216,6 +232,15 @@ public class Ventana extends javax.swing.JFrame {
         tabla.setValueAt(trial, espacio, 0);
         tabla.setValueAt(picas, espacio, 1);
         tabla.setValueAt(fijas, espacio, 2);
+        
+    }
+    
+    public void eraseTable(){
+        for(int i=0; i<tabla.getRowCount(); i++){
+            for (int j=0; j<tabla.getColumnCount(); j++){
+                tabla.setValueAt(null, i, j);
+            }
+        }
     }
     
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -223,6 +248,45 @@ public class Ventana extends javax.swing.JFrame {
         back.newGame();
         setEdit(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // Acerca de:
+        String texto = "<html>"
+                + "<body>"
+                + "<h2> Juego de Picas y Fijas </h2>"
+                + "<br>"
+                + "Realizado por Diana, Eduardo y Jorge"
+                + "<br>"
+                + "</body>"
+                + "</html>";
+        
+        JOptionPane.showMessageDialog(null, texto);
+        
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // Como jugar
+        
+        String texto = "<html>"
+                + "<body>"
+                + "<p>Como Jugar:</p>"
+                + "<p>El juego generara un numero de 4 digitos aleatoreamente.</p>"
+                + "<p>En el campo de texto introduce un numero de 4 digitos, y al oprimir enter te saldra en la tabla de abajo tu intento y cuantas picas o fijas tuviste.</p>"
+                + "<p>Ejemplo:</p>"
+                + "<p>Se genera <strong>4152</strong></p>"
+                + "<p>Introduces <strong>5143</strong></p>"
+                + "<p>Se te mostraran: 3 Picas (rojo), 1 Fija(azul):&nbsp; <strong><span style=\"color: #3366ff;\"><span style=\"color: #ff0000;\">5</span>1<span style=\"color: #ff0000;\">4</span></span>3</strong></p>"
+                + "<p><span style=\"color: #000000;\">De esta manera deberas adivinar el numero en base a cuantas picas o fijas tienes, en 8 intentos.</span></p>"
+                + "</body>"
+                + "</html>";
+        
+        JOptionPane.showMessageDialog(null, texto);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     public void setEdit(boolean s){
         UserInput.setEditable(s);
