@@ -15,7 +15,6 @@ public class Game {
     private static String _generatedNumber = "";
     private int picas = 0;
     private int fijas = 0;
-    private boolean isGameActive = false;
     private int vidas = 0;
     private Random rand = new Random();
     
@@ -25,13 +24,9 @@ public class Game {
     }
     
     public void startGame(){
-    // este metodo iniciara el juego.
-    // nada.
+     // este metodo iniciara el juego.
         _generatedNumber = getNum();
         System.out.println("Numero Generado: "+_generatedNumber);
-    //Debug purposes only.
-    //System.out.println("El numero se ha generado correctamente: "+_generatedNumber);
-        isGameActive = true;
     }
     
     public String getWinNumber(){
@@ -56,7 +51,6 @@ public class Game {
                 }
             }
         } 
-        
         vidas--;
     }
     
@@ -95,11 +89,7 @@ public class Game {
     public int getVidas(){
         return vidas;
     }
-    
-    
-    public boolean gameStatus(){
-        return isGameActive;
-    }
+
     
     public int getPicas(){
         return picas;

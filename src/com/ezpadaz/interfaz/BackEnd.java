@@ -21,14 +21,15 @@ public class BackEnd{
     public BackEnd(Ventana ventana){
         this.ventana = ventana;
         juego = new Game();
-        ventana.updateStatus(juego.gameStatus());
+        ventana.updateStatus(false);
     }
     
 
     public void newGame(){
         juego.setVidas(ventana.getTableSize());
         juego.startGame();
-        ventana.updateStatus(juego.gameStatus());
+        ventana.updateStatus(true);
+        ventana.setEdit(true);
         ventana.eraseTable();
     }
     

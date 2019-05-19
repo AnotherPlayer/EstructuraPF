@@ -68,6 +68,7 @@ public class Ventana extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Juego de Picas y Fijas");
         setResizable(false);
 
         jLabel1.setText("Picas / Fijas Beta");
@@ -244,7 +245,6 @@ public class Ventana extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // Boton para iniciar nuevo juego.
         back.newGame();
-        setEdit(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
